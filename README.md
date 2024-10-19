@@ -11,8 +11,18 @@ This project is a Zomato restaurant scraper built using **Python**, **Selenium**
 
 Scraping is only limited to publicly available data. Please do not scrape any privatised information. 
 
-1. **`rest_urls.py`**: This script scrapes the URLs of all restaurants from a given Zomato page. Also specifiy the city inside the code for which you want to exract the data. 
+1. **`rest_urls.py`**: This script scrapes the URLs of all restaurants from a given Zomato page. Also specifiy the city inside the code for which you want to exract the data.
+logic: 
+Webpage Access: The script uses Selenium to open a Zomato webpage that lists restaurants.
+Scrolling: It automatically scrolls down the page for a set duration to load more restaurants.
+Extract URLs: It looks for a JSON script on the webpage that contains restaurant data, and extracts the URLs of the restaurants from this JSON.
+Save URLs: The extracted URLs are saved to a text file (restaurant_urls.txt), which will be used later for further scraping.
 2. **`rest_info.py`**: This script scrapes individual restaurant information such as name, description, phone number, aggregate rating, and more from the restaurant URLs.
+logic:
+Open URLs: The script reads the URLs from the restaurant_urls.txt file.
+Access Restaurant Pages: For each URL, it uses Selenium to open the Zomato restaurant page.
+Extract Data: Using BeautifulSoup, it extracts details like the restaurant's name, description, phone number, rating, reviews count, and cuisine type from the page's HTML.
+Save Data: The extracted restaurant data is saved into a CSV file (restaurant_data.csv). 
 
 ## Table of Contents
 - [Installation](#installation)
