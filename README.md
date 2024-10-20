@@ -40,7 +40,7 @@ Save Data: The extracted restaurant data is saved into a CSV file (restaurant_da
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/zomato-scraper.git
+    git clone https://github.com/darsh0o/zomato-scraper.git
     cd zomato-scraper
     ```
 
